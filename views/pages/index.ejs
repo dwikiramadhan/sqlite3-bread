@@ -1,0 +1,89 @@
+<%- include('../partials/head'); %>
+
+<body>
+    <div class="container" style="margin-top: 30px;">
+        <h1>BREAD (Browse, Read, Edit, Add, Delete)</h1>
+        <h4>Filters</h4>
+        <form action="/" method="GET">
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">
+                    <input type="checkbox" id="checked_id" name="checked_id" value="true"> ID
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputId" name="id" placeholder="ID">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputString" class="col-sm-2 col-form-label">
+                    <input type="checkbox" id="checked_string" name="checked_string" value="true"> String
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputString"  name="string" placeholder="String">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputInteger" class="col-sm-2 col-form-label">
+                    <input type="checkbox" id="checked_integer" name="checked_integer" value="true"> Integer
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputInteger" name="integer" placeholder="Integer">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputFloat" class="col-sm-2 col-form-label">
+                    <input type="checkbox" id="checked_float" name="checked_float" value="true"> Float
+                </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputFloat" name="float" placeholder="Float">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputDate" class="col-sm-2 col-form-label">
+                    <input type="checkbox" id="checked_date_from" name="checked_date" value="true"> Date
+                </label>
+                <div class="col-sm-3">
+                    <input type="date" class="form-control" id="inputDate" name="start_date" placeholder="Start date">
+                </div>
+                <div class="col-sm-0">
+                    <p>to</p>
+                </div>
+                <div class="col-sm-3">
+                    <input type="date" class="form-control" id="inputDate" name="end_date" placeholder="End date">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="selectBoolean" class="col-sm-2 col-form-label">
+                    <input type="checkbox" id="checked_boolean" name="checked_boolean" value="true"> Boolean
+                </label>
+                <div class="col-sm-8">
+                    <select class="form-control" name="boolean">
+                        <option>Choose the boolean ...</option>
+                        <option value="1">True</option>
+                        <option value="0">False</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <p><input type="submit" class="btn btn-primary" value="Search"/></p>
+            </div>
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">String</th>
+                    <th scope="col">Integer</th>
+                    <th scope="col">Float</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Boolean</th>
+                    <th scope="col">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <a href="/add" class="btn btn-primary">Add</a>
+    </div>
+</body>
+<%- include('../partials/footer'); %>
